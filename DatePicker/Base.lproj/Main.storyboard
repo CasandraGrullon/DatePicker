@@ -82,6 +82,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3C-RO-tAj">
                                 <rect key="frame" x="182.5" y="478.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="rsvpChanged:" destination="zO6-mw-eSs" eventType="valueChanged" id="Q50-WN-RNo"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The event is set for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j44-D0-r3b">
                                 <rect key="frame" x="101" y="336.5" width="212" height="29"/>
@@ -116,6 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="bMV-7G-Mez"/>
                     </view>
                     <navigationItem key="navigationItem" id="ubS-0X-ePi"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="j44-D0-r3b" id="GgO-YS-hhA"/>
+                        <outlet property="selectedDateLabel" destination="L46-vD-ByU" id="ywL-1j-FwK"/>
+                        <outlet property="switchControl" destination="s3C-RO-tAj" id="9fo-Qr-BMK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJz-oc-Dsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
