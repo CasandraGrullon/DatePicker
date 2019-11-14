@@ -10,13 +10,16 @@
         <!--Create Event-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateEventViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qht-4P-7t1">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="FLF-pS-VNu"/>
+                                </connections>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="create an event" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4P-kB-6Kk">
                                 <rect key="frame" x="20" y="295" width="374" height="37"/>
@@ -52,15 +55,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Event" id="y1g-IH-3OW"/>
+                    <connections>
+                        <outlet property="createEventButton" destination="qhm-sA-WEf" id="SQp-Aj-g5h"/>
+                        <outlet property="eventDatePicker" destination="qht-4P-7t1" id="ABq-g7-FBT"/>
+                        <outlet property="eventTextField" destination="e4P-kB-6Kk" id="c9m-6b-fv5"/>
+                        <outlet property="rsvpLabel" destination="Hcd-Tc-2wP" id="UKn-99-FPq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="111.83035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="v7Z-4t-0Ss">
             <objects>
-                <viewController id="zO6-mw-eSs" sceneMemberID="viewController">
+                <viewController id="zO6-mw-eSs" customClass="DetailViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yrE-eB-MQj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
