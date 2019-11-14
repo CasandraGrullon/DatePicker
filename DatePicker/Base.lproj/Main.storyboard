@@ -26,6 +26,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhm-sA-WEf">
                                 <rect key="frame" x="163" y="596" width="88" height="30"/>
                                 <state key="normal" title="Create Event"/>
+                                <connections>
+                                    <segue destination="zO6-mw-eSs" kind="show" id="PrC-Vc-pLY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSVP NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcd-Tc-2wP">
                                 <rect key="frame" x="171" y="634" width="72" height="21"/>
@@ -62,24 +65,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PL-9L-ONw">
-                                <rect key="frame" x="150" y="437.5" width="114" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will you be attending this event?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PL-9L-ONw">
+                                <rect key="frame" x="83" y="437.5" width="248" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3C-RO-tAj">
-                                <rect key="frame" x="183" y="476" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s3C-RO-tAj">
+                                <rect key="frame" x="182.5" y="478.5" width="51" height="31"/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The event is set for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j44-D0-r3b">
+                                <rect key="frame" x="101" y="336.5" width="212" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L46-vD-ByU">
+                                <rect key="frame" x="149" y="373.5" width="116.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3co-cr-048">
+                                <rect key="frame" x="161.5" y="549.5" width="91" height="30"/>
+                                <state key="normal" title="Submit RSVP"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3PL-9L-ONw" firstAttribute="centerY" secondItem="yrE-eB-MQj" secondAttribute="centerY" id="3Xf-ge-hOc"/>
                             <constraint firstItem="3PL-9L-ONw" firstAttribute="centerX" secondItem="yrE-eB-MQj" secondAttribute="centerX" id="725-PE-tEl"/>
+                            <constraint firstItem="j44-D0-r3b" firstAttribute="centerX" secondItem="yrE-eB-MQj" secondAttribute="centerX" id="9KO-O1-vT8"/>
+                            <constraint firstItem="3co-cr-048" firstAttribute="centerX" secondItem="yrE-eB-MQj" secondAttribute="centerX" id="9WI-fU-ocf"/>
+                            <constraint firstItem="3co-cr-048" firstAttribute="top" secondItem="s3C-RO-tAj" secondAttribute="bottom" constant="40" id="DH5-5f-CNq"/>
+                            <constraint firstItem="s3C-RO-tAj" firstAttribute="centerX" secondItem="yrE-eB-MQj" secondAttribute="centerX" id="FXa-xr-jeR"/>
+                            <constraint firstItem="s3C-RO-tAj" firstAttribute="top" secondItem="3PL-9L-ONw" secondAttribute="bottom" constant="20" id="UuQ-JG-lvz"/>
+                            <constraint firstItem="L46-vD-ByU" firstAttribute="centerX" secondItem="yrE-eB-MQj" secondAttribute="centerX" id="Vz8-go-3Sr"/>
+                            <constraint firstItem="3PL-9L-ONw" firstAttribute="top" secondItem="L46-vD-ByU" secondAttribute="bottom" constant="40" id="X5x-ZC-C2Z"/>
+                            <constraint firstItem="L46-vD-ByU" firstAttribute="top" secondItem="j44-D0-r3b" secondAttribute="bottom" constant="8" id="rne-iI-UCn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bMV-7G-Mez"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ubS-0X-ePi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJz-oc-Dsu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
